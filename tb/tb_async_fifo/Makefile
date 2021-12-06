@@ -3,7 +3,7 @@ ifneq ($(words $(CURDIR)),1)
 endif
 
 CFLAGS := "-Wall -Werror -Wextra --std=c++17 -O3 -g"
-SIMFLAGS := -O2 --cc --autoflush --assert -sv -y ../.. -Mdir bin -CFLAGS $(CFLAGS)
+SIMFLAGS := -O2 --cc --autoflush --assert -sv -y ../../rtl/ -Mdir bin -CFLAGS $(CFLAGS)
 TFLAG := --trace
 
 .PHONY: Vtop run clean info
