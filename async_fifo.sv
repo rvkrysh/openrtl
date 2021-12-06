@@ -30,8 +30,10 @@ endfunction
 function [DEPTH_LOG2-1:0] gray2bin;
   input [DEPTH_LOG2-1:0] gray;
 begin
+/* verilator lint_off WIDTH */
   for (int i = 0; i < DEPTH_LOG2; i++)
     gray2bin = ^(gray >> i);
+/* verilator lint_on WIDTH */
 end
 endfunction
 
